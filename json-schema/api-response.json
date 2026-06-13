@@ -1,0 +1,46 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/giantbomb/main/json-schema/api-response.json",
+  "title": "ApiResponse",
+  "description": "Standard wrapper response returned by all Giant Bomb API endpoints",
+  "type": "object",
+  "properties": {
+    "error": {
+      "type": "string",
+      "description": "Human-readable error message; 'OK' on success"
+    },
+    "limit": {
+      "type": "integer",
+      "description": "Number of results per page as requested"
+    },
+    "offset": {
+      "type": "integer",
+      "description": "Offset into the result set"
+    },
+    "number_of_page_results": {
+      "type": "integer",
+      "description": "Number of results returned on the current page"
+    },
+    "number_of_total_results": {
+      "type": "integer",
+      "description": "Total number of results matching the query"
+    },
+    "status_code": {
+      "type": "integer",
+      "description": "Status code; 1 indicates success",
+      "enum": [1, 100, 101, 102, 103, 104]
+    },
+    "results": {
+      "description": "The result data; an array for list endpoints or a single object for detail endpoints",
+      "oneOf": [
+        {"type": "array"},
+        {"type": "object"}
+      ]
+    },
+    "version": {
+      "type": "string",
+      "description": "API version string"
+    }
+  },
+  "required": ["error", "status_code", "results"]
+}

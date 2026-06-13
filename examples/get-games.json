@@ -1,0 +1,49 @@
+{
+  "summary": "Example: List games filtered by platform",
+  "description": "Returns a paginated list of games for a specific platform using the filter parameter",
+  "request": {
+    "method": "GET",
+    "url": "https://www.giantbomb.com/api/games/",
+    "parameters": {
+      "api_key": "YOUR_API_KEY",
+      "format": "json",
+      "filter": "platforms:94",
+      "field_list": "id,guid,name,deck,original_release_date,platforms,image",
+      "limit": 10,
+      "offset": 0,
+      "sort": "original_release_date:desc"
+    }
+  },
+  "response": {
+    "error": "OK",
+    "limit": 10,
+    "offset": 0,
+    "number_of_page_results": 10,
+    "number_of_total_results": 1523,
+    "status_code": 1,
+    "results": [
+      {
+        "id": 60799,
+        "guid": "3030-60799",
+        "name": "Elden Ring",
+        "deck": "An action RPG developed by FromSoftware and published by Bandai Namco in collaboration with author George R.R. Martin.",
+        "original_release_date": "2022-02-25",
+        "image": {
+          "icon_url": "https://www.giantbomb.com/a/uploads/square_avatar/8/87790/3345671-eldenring.jpg",
+          "medium_url": "https://www.giantbomb.com/a/uploads/scale_medium/8/87790/3345671-eldenring.jpg",
+          "screen_url": "https://www.giantbomb.com/a/uploads/screen_medium/8/87790/3345671-eldenring.jpg",
+          "small_url": "https://www.giantbomb.com/a/uploads/scale_small/8/87790/3345671-eldenring.jpg",
+          "super_url": "https://www.giantbomb.com/a/uploads/scale_large/8/87790/3345671-eldenring.jpg",
+          "thumb_url": "https://www.giantbomb.com/a/uploads/square_tiny/8/87790/3345671-eldenring.jpg",
+          "tiny_url": "https://www.giantbomb.com/a/uploads/square_mini/8/87790/3345671-eldenring.jpg"
+        },
+        "platforms": [
+          {"id": 94, "name": "PlayStation 5", "abbreviation": "PS5"},
+          {"id": 145, "name": "Xbox Series X", "abbreviation": "Series X"},
+          {"id": 146, "name": "PC", "abbreviation": "PC"}
+        ]
+      }
+    ],
+    "version": "1.0"
+  }
+}

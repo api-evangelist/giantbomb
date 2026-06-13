@@ -1,0 +1,154 @@
+{
+  "title": "Giant Bomb API Vocabulary",
+  "description": "Domain terms and concepts used in the Giant Bomb API",
+  "version": "1.0.0",
+  "source": "https://www.giantbomb.com/api/documentation/",
+  "terms": [
+    {
+      "term": "guid",
+      "label": "Globally Unique Identifier",
+      "description": "A unique identifier for any resource in the Giant Bomb database, formatted as XXXX-XXXXXXXX where the prefix indicates the resource type.",
+      "example": "3030-1672"
+    },
+    {
+      "term": "api_key",
+      "label": "API Key",
+      "description": "A personal API key required to authenticate all requests to the Giant Bomb API. Obtained by registering an account at giantbomb.com.",
+      "type": "authentication"
+    },
+    {
+      "term": "format",
+      "label": "Response Format",
+      "description": "The format in which the API returns data. Supported values are 'json' and 'xml'.",
+      "values": ["json", "xml"]
+    },
+    {
+      "term": "field_list",
+      "label": "Field List",
+      "description": "A comma-separated list of field names to include in the response. Use this to reduce response size by requesting only needed fields.",
+      "example": "id,guid,name,deck,image"
+    },
+    {
+      "term": "limit",
+      "label": "Result Limit",
+      "description": "The maximum number of results to return per page. Maximum value is 100.",
+      "type": "pagination",
+      "maximum": 100
+    },
+    {
+      "term": "offset",
+      "label": "Result Offset",
+      "description": "The number of results to skip before returning results. Used for pagination.",
+      "type": "pagination"
+    },
+    {
+      "term": "sort",
+      "label": "Sort Order",
+      "description": "Field to sort results by. Prefix with a colon and 'asc' or 'desc' to set direction. Example: 'name:asc'.",
+      "example": "original_release_date:desc"
+    },
+    {
+      "term": "filter",
+      "label": "Filter Expression",
+      "description": "A field:value pair used to filter results. Multiple filters can be combined with commas.",
+      "example": "platforms:94,name:zelda"
+    },
+    {
+      "term": "deck",
+      "label": "Deck",
+      "description": "A brief one-paragraph plain-text summary of a resource, used as a short description across the Giant Bomb site.",
+      "type": "content-field"
+    },
+    {
+      "term": "status_code",
+      "label": "API Status Code",
+      "description": "Numeric code indicating the result of the API request.",
+      "values": [
+        {"code": 1, "meaning": "OK"},
+        {"code": 100, "meaning": "Invalid API Key"},
+        {"code": 101, "meaning": "Object Not Found"},
+        {"code": 102, "meaning": "Error in URL Format"},
+        {"code": 103, "meaning": "JSON/JSONP Parse Error"},
+        {"code": 104, "meaning": "Filter Error"}
+      ]
+    },
+    {
+      "term": "game",
+      "label": "Game",
+      "description": "A video game entry in the Giant Bomb database, containing metadata such as name, release date, platforms, genres, developers, and publishers.",
+      "guid_prefix": "3030"
+    },
+    {
+      "term": "platform",
+      "label": "Platform",
+      "description": "A gaming hardware platform or operating system on which games are released (e.g., PlayStation 5, Xbox Series X, PC).",
+      "guid_prefix": "3045"
+    },
+    {
+      "term": "character",
+      "label": "Character",
+      "description": "A fictional character that appears in one or more video games.",
+      "guid_prefix": "3005"
+    },
+    {
+      "term": "company",
+      "label": "Company",
+      "description": "A business entity involved in the video game industry as a developer, publisher, or other role.",
+      "guid_prefix": "3010"
+    },
+    {
+      "term": "franchise",
+      "label": "Franchise",
+      "description": "A named series or brand that encompasses multiple related video game titles.",
+      "guid_prefix": "3025"
+    },
+    {
+      "term": "concept",
+      "label": "Concept",
+      "description": "A gameplay mechanic, design pattern, or general concept documented in the Giant Bomb wiki.",
+      "guid_prefix": "3015"
+    },
+    {
+      "term": "location",
+      "label": "Location",
+      "description": "A fictional or real-world location that appears within video games.",
+      "guid_prefix": "3035"
+    },
+    {
+      "term": "object",
+      "label": "Object",
+      "description": "A physical item or in-game object that appears in video games.",
+      "guid_prefix": "3040"
+    },
+    {
+      "term": "person",
+      "label": "Person",
+      "description": "A real-world person involved in the video game industry (developer, designer, voice actor, etc.).",
+      "guid_prefix": "3062"
+    },
+    {
+      "term": "release",
+      "label": "Release",
+      "description": "A specific regional release of a game, potentially with different release dates, names, or content from other regional releases.",
+      "guid_prefix": "3050"
+    },
+    {
+      "term": "review",
+      "label": "Review",
+      "description": "An editorial review of a video game published by Giant Bomb staff, including a score and written critique.",
+      "guid_prefix": "3400"
+    },
+    {
+      "term": "video",
+      "label": "Video",
+      "description": "A video production published by Giant Bomb, such as a Quick Look, review video, or feature.",
+      "guid_prefix": "2300"
+    },
+    {
+      "term": "theme",
+      "label": "Theme",
+      "description": "A narrative or aesthetic theme used to categorize and describe video games.",
+      "guid_prefix": "3055"
+    }
+  ]
+}

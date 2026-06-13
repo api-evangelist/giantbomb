@@ -42,6 +42,8 @@ apis:
         url: https://www.giantbomb.com/api/
       - type: Authentication
         url: https://www.giantbomb.com/api/
+      - type: OpenAPI
+        url: https://raw.githubusercontent.com/api-evangelist/giantbomb/refs/heads/main/openapi/openapi.json
       - type: RateLimits
         url: https://raw.githubusercontent.com/api-evangelist/giantbomb/refs/heads/main/rate-limits/giantbomb-rate-limits.yml
       - type: Plans

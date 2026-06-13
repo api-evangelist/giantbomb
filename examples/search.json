@@ -1,0 +1,49 @@
+{
+  "summary": "Example: Search across multiple resource types",
+  "description": "Searches for 'zelda' across games and franchises",
+  "request": {
+    "method": "GET",
+    "url": "https://www.giantbomb.com/api/search/",
+    "parameters": {
+      "api_key": "YOUR_API_KEY",
+      "format": "json",
+      "query": "zelda",
+      "resources": "game,franchise",
+      "field_list": "id,guid,name,resource_type,deck",
+      "limit": 5,
+      "offset": 0
+    }
+  },
+  "response": {
+    "error": "OK",
+    "limit": 5,
+    "offset": 0,
+    "number_of_page_results": 5,
+    "number_of_total_results": 47,
+    "status_code": 1,
+    "results": [
+      {
+        "id": 2255,
+        "guid": "3025-2255",
+        "name": "The Legend of Zelda",
+        "resource_type": "franchise",
+        "deck": "Nintendo's long-running action-adventure franchise featuring Link, Zelda, and Ganon."
+      },
+      {
+        "id": 1672,
+        "guid": "3030-1672",
+        "name": "The Legend of Zelda: Ocarina of Time",
+        "resource_type": "game",
+        "deck": "The first 3D Zelda game, widely considered one of the greatest video games ever made."
+      },
+      {
+        "id": 17765,
+        "guid": "3030-17765",
+        "name": "The Legend of Zelda: Breath of the Wild",
+        "resource_type": "game",
+        "deck": "An open-world action-adventure game for Nintendo Switch and Wii U."
+      }
+    ],
+    "version": "1.0"
+  }
+}

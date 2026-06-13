@@ -1,0 +1,113 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "gb": "https://www.giantbomb.com/api/",
+    "id": "@id",
+    "type": "@type",
+    "guid": {
+      "@id": "gb:guid",
+      "@type": "xsd:string"
+    },
+    "name": "schema:name",
+    "description": "schema:description",
+    "deck": {
+      "@id": "gb:deck",
+      "@comment": "Brief summary text used by Giant Bomb"
+    },
+    "image": "schema:image",
+    "icon_url": "schema:thumbnail",
+    "medium_url": {
+      "@id": "schema:image",
+      "@type": "@id"
+    },
+    "super_url": {
+      "@id": "schema:image",
+      "@type": "@id"
+    },
+    "site_detail_url": "schema:url",
+    "api_detail_url": {
+      "@id": "gb:apiDetailUrl",
+      "@type": "@id"
+    },
+    "original_release_date": {
+      "@id": "schema:datePublished",
+      "@type": "xsd:date"
+    },
+    "publish_date": {
+      "@id": "schema:datePublished",
+      "@type": "xsd:dateTime"
+    },
+    "platforms": "schema:gamePlatform",
+    "abbreviation": "schema:alternateName",
+    "aliases": "schema:alternateName",
+    "developers": {
+      "@id": "schema:author",
+      "@comment": "Companies that developed this game"
+    },
+    "publishers": {
+      "@id": "schema:publisher",
+      "@comment": "Companies that published this game"
+    },
+    "franchises": {
+      "@id": "schema:isPartOf",
+      "@comment": "Franchises this game belongs to"
+    },
+    "genres": "schema:genre",
+    "score": "schema:ratingValue",
+    "reviewer": "schema:author",
+    "length_seconds": "schema:duration",
+    "url": "schema:contentUrl",
+    "resource_type": {
+      "@id": "gb:resourceType",
+      "@comment": "Giant Bomb resource type identifier"
+    },
+    "status_code": {
+      "@id": "gb:statusCode",
+      "@type": "xsd:integer"
+    },
+    "number_of_total_results": {
+      "@id": "gb:totalResults",
+      "@type": "xsd:integer"
+    },
+    "results": {
+      "@id": "gb:results",
+      "@container": "@set"
+    },
+    "Game": "schema:VideoGame",
+    "Platform": "schema:GamePlayMode",
+    "Character": "schema:Person",
+    "Company": "schema:Organization",
+    "Franchise": "schema:Series",
+    "Review": "schema:Review",
+    "Video": "schema:VideoObject",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "schema": "https://schema.org/"
+  },
+  "@graph": [
+    {
+      "@type": "schema:WebAPI",
+      "@id": "https://www.giantbomb.com/api",
+      "name": "Giant Bomb API",
+      "description": "RESTful API providing access to the Giant Bomb video game database covering games, characters, companies, franchises, platforms, releases, reviews, and videos.",
+      "url": "https://www.giantbomb.com/api/",
+      "documentation": "https://www.giantbomb.com/api/documentation/",
+      "provider": {
+        "@type": "schema:Organization",
+        "name": "Giant Bomb",
+        "url": "https://www.giantbomb.com",
+        "sameAs": [
+          "https://x.com/giantbomb",
+          "https://www.linkedin.com/company/giant-bomb/"
+        ]
+      },
+      "termsOfService": "https://www.giantbomb.com/api/",
+      "potentialAction": [
+        {
+          "@type": "schema:SearchAction",
+          "target": "https://www.giantbomb.com/api/search/?api_key={api_key}&format=json&query={query}",
+          "query-input": "required name=query"
+        }
+      ]
+    }
+  ]
+}

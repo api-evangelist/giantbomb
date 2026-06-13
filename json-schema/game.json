@@ -1,0 +1,144 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/giantbomb/main/json-schema/game.json",
+  "title": "Game",
+  "description": "A video game entry from the Giant Bomb database",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "integer",
+      "description": "Unique numeric identifier for the game"
+    },
+    "guid": {
+      "type": "string",
+      "description": "Globally unique identifier in the format XXXX-XXXXXXXX"
+    },
+    "name": {
+      "type": "string",
+      "description": "Name of the game"
+    },
+    "deck": {
+      "type": "string",
+      "description": "Brief one-paragraph summary of the game"
+    },
+    "description": {
+      "type": "string",
+      "description": "Full HTML description of the game"
+    },
+    "aliases": {
+      "type": "string",
+      "description": "Newline-separated list of alternative names"
+    },
+    "api_detail_url": {
+      "type": "string",
+      "format": "uri",
+      "description": "URL pointing to the API endpoint for this game"
+    },
+    "site_detail_url": {
+      "type": "string",
+      "format": "uri",
+      "description": "URL to the game page on Giant Bomb website"
+    },
+    "original_release_date": {
+      "type": ["string", "null"],
+      "format": "date",
+      "description": "Original release date of the game"
+    },
+    "expected_release_day": {
+      "type": ["integer", "null"],
+      "description": "Expected release day (for upcoming games)"
+    },
+    "expected_release_month": {
+      "type": ["integer", "null"],
+      "description": "Expected release month (for upcoming games)"
+    },
+    "expected_release_year": {
+      "type": ["integer", "null"],
+      "description": "Expected release year (for upcoming games)"
+    },
+    "expected_release_quarter": {
+      "type": ["integer", "null"],
+      "description": "Expected release quarter (for upcoming games)"
+    },
+    "image": {
+      "type": "object",
+      "description": "Image URLs in various sizes",
+      "properties": {
+        "icon_url": {"type": "string", "format": "uri"},
+        "medium_url": {"type": "string", "format": "uri"},
+        "screen_url": {"type": "string", "format": "uri"},
+        "small_url": {"type": "string", "format": "uri"},
+        "super_url": {"type": "string", "format": "uri"},
+        "thumb_url": {"type": "string", "format": "uri"},
+        "tiny_url": {"type": "string", "format": "uri"}
+      }
+    },
+    "platforms": {
+      "type": "array",
+      "description": "Platforms the game is available on",
+      "items": {
+        "type": "object",
+        "properties": {
+          "api_detail_url": {"type": "string", "format": "uri"},
+          "id": {"type": "integer"},
+          "name": {"type": "string"},
+          "site_detail_url": {"type": "string", "format": "uri"},
+          "abbreviation": {"type": "string"}
+        }
+      }
+    },
+    "genres": {
+      "type": "array",
+      "description": "Genres associated with the game",
+      "items": {
+        "type": "object",
+        "properties": {
+          "api_detail_url": {"type": "string", "format": "uri"},
+          "id": {"type": "integer"},
+          "name": {"type": "string"},
+          "site_detail_url": {"type": "string", "format": "uri"}
+        }
+      }
+    },
+    "developers": {
+      "type": "array",
+      "description": "Companies that developed the game",
+      "items": {
+        "type": "object",
+        "properties": {
+          "api_detail_url": {"type": "string", "format": "uri"},
+          "id": {"type": "integer"},
+          "name": {"type": "string"},
+          "site_detail_url": {"type": "string", "format": "uri"}
+        }
+      }
+    },
+    "publishers": {
+      "type": "array",
+      "description": "Companies that published the game",
+      "items": {
+        "type": "object",
+        "properties": {
+          "api_detail_url": {"type": "string", "format": "uri"},
+          "id": {"type": "integer"},
+          "name": {"type": "string"},
+          "site_detail_url": {"type": "string", "format": "uri"}
+        }
+      }
+    },
+    "franchises": {
+      "type": "array",
+      "description": "Franchises the game belongs to",
+      "items": {
+        "type": "object",
+        "properties": {
+          "api_detail_url": {"type": "string", "format": "uri"},
+          "id": {"type": "integer"},
+          "name": {"type": "string"},
+          "site_detail_url": {"type": "string", "format": "uri"}
+        }
+      }
+    }
+  },
+  "required": ["id", "guid", "name"]
+}
