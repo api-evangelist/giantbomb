@@ -1,0 +1,79 @@
+aid: giantbomb
+name: Giant Bomb
+description: >-
+  Giant Bomb is a video game database and media platform providing comprehensive data on over
+  100,000 games, characters, companies, concepts, franchises, locations, objects, and other
+  game-related entities. The Giant Bomb API offers RESTful access to this rich dataset, enabling
+  developers to query and integrate video game information into their applications using simple
+  GET requests authenticated with a personal API key.
+type: Index
+image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+tags:
+  - Entertainment
+  - Video Games
+  - Game Database
+  - Gaming
+  - Media
+url: https://raw.githubusercontent.com/api-evangelist/giantbomb/refs/heads/main/apis.yml
+created: '2026-06-13'
+modified: '2026-06-13'
+specificationVersion: '0.19'
+apis:
+  - aid: giantbomb:giantbomb-api
+    name: Giant Bomb API
+    description: >-
+      The Giant Bomb API provides RESTful access to the Giant Bomb video game database, covering
+      games, characters, companies, concepts, franchises, genres, locations, objects, people,
+      platforms, releases, reviews, themes, videos, and more. Authentication is via an API key
+      passed as a query parameter. Responses are available in JSON or XML format.
+    humanURL: https://www.giantbomb.com/api/
+    baseURL: https://www.giantbomb.com/api
+    tags:
+      - Video Games
+      - Game Database
+      - Gaming
+      - Characters
+      - Companies
+      - Franchises
+    properties:
+      - type: Documentation
+        url: https://www.giantbomb.com/api/documentation/
+      - type: GettingStarted
+        url: https://www.giantbomb.com/api/
+      - type: Authentication
+        url: https://www.giantbomb.com/api/
+      - type: RateLimits
+        url: https://raw.githubusercontent.com/api-evangelist/giantbomb/refs/heads/main/rate-limits/giantbomb-rate-limits.yml
+      - type: Plans
+        url: https://raw.githubusercontent.com/api-evangelist/giantbomb/refs/heads/main/plans/giantbomb-plans-pricing.yml
+      - type: FinOps
+        url: https://raw.githubusercontent.com/api-evangelist/giantbomb/refs/heads/main/finops/giantbomb-finops.yml
+    contact:
+      - FN: Giant Bomb API Developers Forum
+        url: https://www.giantbomb.com/forums/api-developers-3017/
+common:
+  - type: Website
+    url: https://www.giantbomb.com/
+  - type: Documentation
+    url: https://www.giantbomb.com/api/documentation/
+  - type: GitHubOrg
+    url: https://github.com/topics/giantbomb-api
+  - type: LinkedIn
+    url: https://www.linkedin.com/company/giant-bomb/
+  - type: Blog
+    url: https://www.giantbomb.com/articles/
+  - type: Pricing
+    url: https://www.giantbomb.com/api/
+  - type: StatusPage
+    url: https://www.giantbomb.com/
+  - type: X
+    url: https://x.com/giantbomb
+  - type: Plans
+    url: https://raw.githubusercontent.com/api-evangelist/giantbomb/refs/heads/main/plans/giantbomb-plans-pricing.yml
+  - type: RateLimits
+    url: https://raw.githubusercontent.com/api-evangelist/giantbomb/refs/heads/main/rate-limits/giantbomb-rate-limits.yml
+  - type: FinOps
+    url: https://raw.githubusercontent.com/api-evangelist/giantbomb/refs/heads/main/finops/giantbomb-finops.yml
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com

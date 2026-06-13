@@ -1,0 +1,57 @@
+specification: API Commons Plans
+specificationVersion: '0.1'
+schema: https://raw.githubusercontent.com/api-evangelist/interface-research/main/schema/api-commons.yml#/$defs/Plans
+provider: Giant Bomb
+providerId: giantbomb
+created: '2026-06-13'
+modified: '2026-06-13'
+tags:
+  - Entertainment
+  - Video Games
+  - Game Database
+  - Gaming
+  - Media
+description: >-
+  Machine-readable plans and pricing for the Giant Bomb API. The Giant Bomb API is free to use
+  with a registered API key. There are no paid tiers; access is provided at no cost to registered
+  users subject to rate limits of 200 requests per resource per hour.
+plans:
+  - id: giantbomb-free
+    name: Free
+    type: free
+    description: >-
+      The Giant Bomb API is freely available to all registered users. Obtain an API key by
+      creating a Giant Bomb account and visiting https://www.giantbomb.com/api/. No cost is
+      associated with API access; rate limits apply per resource per hour.
+    entries:
+      - label: API Requests Per Resource Per Hour
+        description: Maximum number of requests per individual resource endpoint per hour
+        name: rate_limit_per_resource
+        type: rate
+        metric: requests_per_hour
+        limit: 200
+        timeFrame: hour
+        geo: global
+        domains:
+          - https://www.giantbomb.com/api
+        unit: 1
+        price: '0.00'
+        userMultiplied: false
+    elements:
+      - name: Public Documentation
+      - name: Community Forum Support
+      - name: Giant Bomb API
+      - name: Games Resource
+      - name: Characters Resource
+      - name: Companies Resource
+      - name: Concepts Resource
+      - name: Franchises Resource
+      - name: Genres Resource
+      - name: Locations Resource
+      - name: Objects Resource
+      - name: Persons Resource
+      - name: Platforms Resource
+      - name: Releases Resource
+      - name: Reviews Resource
+      - name: Videos Resource
+      - name: Search Resource

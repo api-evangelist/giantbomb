@@ -1,0 +1,73 @@
+specification: API Commons Rate Limits
+specificationVersion: '0.1'
+schema: https://raw.githubusercontent.com/api-evangelist/interface-research/main/schema/api-commons.yml#/$defs/RateLimits
+provider: Giant Bomb
+providerId: giantbomb
+created: '2026-06-13'
+modified: '2026-06-13'
+tags:
+  - Entertainment
+  - Video Games
+  - Game Database
+  - Gaming
+  - Media
+  - Rate Limiting
+  - Quotas
+  - Throttling
+description: >-
+  Machine-readable rate limit definitions for the Giant Bomb API. The API enforces a limit of
+  200 requests per resource per hour per API key. Excessive burst rates within a short window
+  may trigger temporary blocks even before the hourly quota is reached. Responses use standard
+  HTTP 429 status codes when limits are exceeded.
+headers:
+  limit: X-RateLimit-Limit
+  remaining: X-RateLimit-Remaining
+  reset: X-RateLimit-Reset
+  retryAfter: Retry-After
+responseCodes:
+  throttled: 429
+  quotaExceeded: 429
+  serviceUnavailable: 503
+limits:
+  - tier: free
+    name: Per Resource Hourly Rate Limit
+    scope: api-key
+    metric: requests_per_hour
+    limit: 200
+    timeFrame: hour
+    applies:
+      - Giant Bomb API
+      - Games Resource
+      - Characters Resource
+      - Companies Resource
+      - Concepts Resource
+      - Franchises Resource
+      - Genres Resource
+      - Locations Resource
+      - Objects Resource
+      - Persons Resource
+      - Platforms Resource
+      - Releases Resource
+      - Reviews Resource
+      - Videos Resource
+      - Search Resource
+  - tier: free
+    name: Burst Rate Velocity Detection
+    scope: api-key
+    metric: requests_per_second
+    limit: 1
+    burst: 5
+    timeFrame: second
+    note: >-
+      Giant Bomb implements velocity detection to prevent malicious use. Sending too many
+      requests per second may result in a temporary block even before the hourly limit is
+      reached. Pacing requests is strongly recommended.
+    applies:
+      - Giant Bomb API
+recovery:
+  strategy: fixed-window
+  windowSize: 3600
+  windowUnit: seconds
+  note: >-
+    The hourly rate limit window resets on a rolling or fixed basis per resource.
+    Implement exponential back-off and retry logic when receiving 429 responses.

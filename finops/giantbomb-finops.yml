@@ -1,0 +1,118 @@
+specification: FinOps Framework
+specificationVersion: '1.0'
+alignedWith:
+  framework: FinOps Foundation Framework
+  frameworkUrl: https://www.finops.org/framework/
+  dataSpec: FOCUS
+  dataSpecVersion: '1.3'
+  dataSpecUrl: https://focus.finops.org/focus-specification/v1-3/
+provider: Giant Bomb
+providerId: giantbomb
+publisherName: Giant Bomb
+serviceCategory: API
+created: '2026-06-13'
+modified: '2026-06-13'
+tags:
+  - Entertainment
+  - Video Games
+  - Game Database
+  - Gaming
+  - Media
+  - FinOps
+  - Cost Management
+  - FOCUS
+description: >-
+  FinOps framework definition for the Giant Bomb API. The Giant Bomb API is a free, no-cost
+  service; there are no direct monetary charges for API usage. FinOps considerations center on
+  operational costs such as engineering time, infrastructure for caching responses, and managing
+  rate limit consumption across teams and applications.
+principles:
+  - name: Visibility
+    description: >-
+      Track API key usage and request volume across teams and applications to understand
+      consumption patterns and avoid hitting rate limits unexpectedly.
+  - name: Allocation
+    description: >-
+      Assign separate API keys per team, environment, or application to enable granular
+      attribution of rate limit consumption and identify heavy consumers.
+  - name: Optimization
+    description: >-
+      Cache API responses locally where data changes infrequently (e.g., game metadata,
+      company info) to reduce redundant requests and stay within the 200 requests/resource/hour
+      limit.
+  - name: Accountability
+    description: >-
+      Establish API key ownership and monitoring so that teams are accountable for their
+      consumption and do not degrade shared services through excessive requests.
+domains:
+  - name: Understand Usage and Cost
+    capabilities:
+      - Data Ingestion
+      - Allocation
+      - Reporting and Analytics
+      - Anomaly Management
+  - name: Quantify Business Value
+    capabilities:
+      - Planning and Estimating
+      - Forecasting
+      - Budgeting
+      - Benchmarking
+      - Unit Economics
+  - name: Optimize Usage and Cost
+    capabilities:
+      - Architecting for Cloud
+      - Rate Optimization
+      - Workload Optimization
+      - Cloud Sustainability
+      - Licensing and SaaS
+  - name: Manage the FinOps Practice
+    capabilities:
+      - FinOps Practice Operations
+      - Invoicing and Chargeback
+      - Education and Enablement
+      - FinOps Tools and Services
+services:
+  - id: giantbomb-api
+    name: Giant Bomb API
+    description: >-
+      Free RESTful API providing video game database access. No monetary cost; FinOps value
+      derives from operational efficiency, caching strategy, and rate limit stewardship.
+    billingModel: free
+    pricingModel: free
+    unitMetrics:
+      - metric: api_request
+        unit: request
+        price: '0.00'
+        currency: USD
+        note: The Giant Bomb API is free; no per-request charges apply.
+    costDrivers:
+      - name: Engineering Time
+        description: Developer time spent integrating, maintaining, and monitoring API usage.
+        category: operational
+      - name: Caching Infrastructure
+        description: >-
+          Infrastructure costs for caching API responses to reduce redundant requests
+          and stay within rate limits.
+        category: infrastructure
+      - name: Rate Limit Monitoring
+        description: >-
+          Tooling and alerting to monitor rate limit consumption across API keys and
+          prevent service disruptions.
+        category: operational
+    optimizationStrategies:
+      - strategy: Response Caching
+        description: >-
+          Cache responses for static or slow-changing resources (games, characters, companies)
+          using TTL-based caching. Giant Bomb data changes infrequently, making this highly
+          effective.
+        estimatedSavings: high
+      - strategy: Request Batching
+        description: >-
+          Use field filters to request only needed data fields per call, reducing the number
+          of supplemental requests needed to build complete records.
+        estimatedSavings: medium
+      - strategy: API Key Segmentation
+        description: >-
+          Use separate API keys per environment (development, staging, production) to avoid
+          production rate limits being consumed by non-production workloads.
+        estimatedSavings: medium
