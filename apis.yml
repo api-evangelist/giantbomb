@@ -7,7 +7,7 @@ description: >-
   developers to query and integrate video game information into their applications using simple
   GET requests authenticated with a personal API key.
 type: Index
-image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
 tags:
   - Entertainment
   - Video Games
