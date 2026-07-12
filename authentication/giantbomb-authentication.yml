@@ -1,0 +1,16 @@
+generated: '2026-07-11'
+method: derived
+source: openapi/openapi.json
+summary:
+  types:
+  - apiKey
+  api_key_in:
+  - query
+schemes:
+- name: apiKeyQuery
+  type: apiKey
+  in: query
+  parameter: api_key
+  description: API key for authentication. Register at https://www.giantbomb.com/api/
+  sources:
+  - openapi/openapi.json
