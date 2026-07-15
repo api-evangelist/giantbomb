@@ -54,6 +54,8 @@ apis:
       - FN: Giant Bomb API Developers Forum
         url: https://www.giantbomb.com/forums/api-developers-3017/
 common:
+  - type: AgenticAccess
+    url: agentic-access/giantbomb-agentic-access.yml
   - type: DomainSecurity
     url: security/giantbomb-domain-security.yml
   - type: Authentication
