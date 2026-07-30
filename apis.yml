@@ -7,7 +7,20 @@ description: >-
   developers to query and integrate video game information into their applications using simple
   GET requests authenticated with a personal API key.
 type: Index
-image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+accessModel:
+  pricing: free
+  onboarding: self-serve
+  trial: false
+  try_now: true
+  public: false
+  label: Free · Self-serve signup
+  confidence: high
+  source:
+  - plans
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/giantbomb.png
 tags:
   - Entertainment
   - Video Games
@@ -19,40 +32,231 @@ created: '2026-06-13'
 modified: '2026-06-13'
 specificationVersion: '0.19'
 apis:
-  - aid: giantbomb:giantbomb-api
-    name: Giant Bomb API
-    description: >-
-      The Giant Bomb API provides RESTful access to the Giant Bomb video game database, covering
-      games, characters, companies, concepts, franchises, genres, locations, objects, people,
-      platforms, releases, reviews, themes, videos, and more. Authentication is via an API key
-      passed as a query parameter. Responses are available in JSON or XML format.
-    humanURL: https://www.giantbomb.com/api/
-    baseURL: https://www.giantbomb.com/api
-    tags:
-      - Video Games
-      - Game Database
-      - Gaming
-      - Characters
-      - Companies
-      - Franchises
-    properties:
-      - type: Documentation
-        url: https://www.giantbomb.com/api/documentation/
-      - type: GettingStarted
-        url: https://www.giantbomb.com/api/
-      - type: Authentication
-        url: https://www.giantbomb.com/api/
-      - type: OpenAPI
-        url: https://raw.githubusercontent.com/api-evangelist/giantbomb/refs/heads/main/openapi/openapi.json
-      - type: RateLimits
-        url: https://raw.githubusercontent.com/api-evangelist/giantbomb/refs/heads/main/rate-limits/giantbomb-rate-limits.yml
-      - type: Plans
-        url: https://raw.githubusercontent.com/api-evangelist/giantbomb/refs/heads/main/plans/giantbomb-plans-pricing.yml
-      - type: FinOps
-        url: https://raw.githubusercontent.com/api-evangelist/giantbomb/refs/heads/main/finops/giantbomb-finops.yml
-    contact:
-      - FN: Giant Bomb API Developers Forum
-        url: https://www.giantbomb.com/forums/api-developers-3017/
+- aid: giantbomb:giantbomb-characters-api
+  name: Giant Bomb Characters API
+  description: Access to character data
+  humanURL: https://www.giantbomb.com/api/
+  baseURL: https://www.giantbomb.com/api
+  tags:
+  - Characters
+  properties:
+  - type: OpenAPI
+    url: openapi/giantbomb-characters-api-openapi.yml
+  - type: Documentation
+    url: https://www.giantbomb.com/api/documentation/
+  - type: GettingStarted
+    url: https://www.giantbomb.com/api/
+  - type: Authentication
+    url: https://www.giantbomb.com/api/
+  - type: RateLimits
+    url: >-
+      https://raw.githubusercontent.com/api-evangelist/giantbomb/refs/heads/main/rate-limits/giantbomb-rate-limits.yml
+  - type: Plans
+    url: >-
+      https://raw.githubusercontent.com/api-evangelist/giantbomb/refs/heads/main/plans/giantbomb-plans-pricing.yml
+  - type: FinOps
+    url: >-
+      https://raw.githubusercontent.com/api-evangelist/giantbomb/refs/heads/main/finops/giantbomb-finops.yml
+- aid: giantbomb:giantbomb-companies-api
+  name: Giant Bomb Companies API
+  description: Access to company data
+  humanURL: https://www.giantbomb.com/api/
+  baseURL: https://www.giantbomb.com/api
+  tags:
+  - Companies
+  properties:
+  - type: OpenAPI
+    url: openapi/giantbomb-companies-api-openapi.yml
+  - type: Documentation
+    url: https://www.giantbomb.com/api/documentation/
+  - type: GettingStarted
+    url: https://www.giantbomb.com/api/
+  - type: Authentication
+    url: https://www.giantbomb.com/api/
+  - type: RateLimits
+    url: >-
+      https://raw.githubusercontent.com/api-evangelist/giantbomb/refs/heads/main/rate-limits/giantbomb-rate-limits.yml
+  - type: Plans
+    url: >-
+      https://raw.githubusercontent.com/api-evangelist/giantbomb/refs/heads/main/plans/giantbomb-plans-pricing.yml
+  - type: FinOps
+    url: >-
+      https://raw.githubusercontent.com/api-evangelist/giantbomb/refs/heads/main/finops/giantbomb-finops.yml
+- aid: giantbomb:giantbomb-franchises-api
+  name: Giant Bomb Franchises API
+  description: Access to franchise data
+  humanURL: https://www.giantbomb.com/api/
+  baseURL: https://www.giantbomb.com/api
+  tags:
+  - Franchises
+  properties:
+  - type: OpenAPI
+    url: openapi/giantbomb-franchises-api-openapi.yml
+  - type: Documentation
+    url: https://www.giantbomb.com/api/documentation/
+  - type: GettingStarted
+    url: https://www.giantbomb.com/api/
+  - type: Authentication
+    url: https://www.giantbomb.com/api/
+  - type: RateLimits
+    url: >-
+      https://raw.githubusercontent.com/api-evangelist/giantbomb/refs/heads/main/rate-limits/giantbomb-rate-limits.yml
+  - type: Plans
+    url: >-
+      https://raw.githubusercontent.com/api-evangelist/giantbomb/refs/heads/main/plans/giantbomb-plans-pricing.yml
+  - type: FinOps
+    url: >-
+      https://raw.githubusercontent.com/api-evangelist/giantbomb/refs/heads/main/finops/giantbomb-finops.yml
+- aid: giantbomb:giantbomb-games-api
+  name: Giant Bomb Games API
+  description: Access to video game data
+  humanURL: https://www.giantbomb.com/api/
+  baseURL: https://www.giantbomb.com/api
+  tags:
+  - Games
+  properties:
+  - type: OpenAPI
+    url: openapi/giantbomb-games-api-openapi.yml
+  - type: Documentation
+    url: https://www.giantbomb.com/api/documentation/
+  - type: GettingStarted
+    url: https://www.giantbomb.com/api/
+  - type: Authentication
+    url: https://www.giantbomb.com/api/
+  - type: RateLimits
+    url: >-
+      https://raw.githubusercontent.com/api-evangelist/giantbomb/refs/heads/main/rate-limits/giantbomb-rate-limits.yml
+  - type: Plans
+    url: >-
+      https://raw.githubusercontent.com/api-evangelist/giantbomb/refs/heads/main/plans/giantbomb-plans-pricing.yml
+  - type: FinOps
+    url: >-
+      https://raw.githubusercontent.com/api-evangelist/giantbomb/refs/heads/main/finops/giantbomb-finops.yml
+- aid: giantbomb:giantbomb-platforms-api
+  name: Giant Bomb Platforms API
+  description: Access to platform data
+  humanURL: https://www.giantbomb.com/api/
+  baseURL: https://www.giantbomb.com/api
+  tags:
+  - Platforms
+  properties:
+  - type: OpenAPI
+    url: openapi/giantbomb-platforms-api-openapi.yml
+  - type: Documentation
+    url: https://www.giantbomb.com/api/documentation/
+  - type: GettingStarted
+    url: https://www.giantbomb.com/api/
+  - type: Authentication
+    url: https://www.giantbomb.com/api/
+  - type: RateLimits
+    url: >-
+      https://raw.githubusercontent.com/api-evangelist/giantbomb/refs/heads/main/rate-limits/giantbomb-rate-limits.yml
+  - type: Plans
+    url: >-
+      https://raw.githubusercontent.com/api-evangelist/giantbomb/refs/heads/main/plans/giantbomb-plans-pricing.yml
+  - type: FinOps
+    url: >-
+      https://raw.githubusercontent.com/api-evangelist/giantbomb/refs/heads/main/finops/giantbomb-finops.yml
+- aid: giantbomb:giantbomb-releases-api
+  name: Giant Bomb Releases API
+  description: Access to game release data
+  humanURL: https://www.giantbomb.com/api/
+  baseURL: https://www.giantbomb.com/api
+  tags:
+  - Releases
+  properties:
+  - type: OpenAPI
+    url: openapi/giantbomb-releases-api-openapi.yml
+  - type: Documentation
+    url: https://www.giantbomb.com/api/documentation/
+  - type: GettingStarted
+    url: https://www.giantbomb.com/api/
+  - type: Authentication
+    url: https://www.giantbomb.com/api/
+  - type: RateLimits
+    url: >-
+      https://raw.githubusercontent.com/api-evangelist/giantbomb/refs/heads/main/rate-limits/giantbomb-rate-limits.yml
+  - type: Plans
+    url: >-
+      https://raw.githubusercontent.com/api-evangelist/giantbomb/refs/heads/main/plans/giantbomb-plans-pricing.yml
+  - type: FinOps
+    url: >-
+      https://raw.githubusercontent.com/api-evangelist/giantbomb/refs/heads/main/finops/giantbomb-finops.yml
+- aid: giantbomb:giantbomb-reviews-api
+  name: Giant Bomb Reviews API
+  description: Access to game reviews
+  humanURL: https://www.giantbomb.com/api/
+  baseURL: https://www.giantbomb.com/api
+  tags:
+  - Reviews
+  properties:
+  - type: OpenAPI
+    url: openapi/giantbomb-reviews-api-openapi.yml
+  - type: Documentation
+    url: https://www.giantbomb.com/api/documentation/
+  - type: GettingStarted
+    url: https://www.giantbomb.com/api/
+  - type: Authentication
+    url: https://www.giantbomb.com/api/
+  - type: RateLimits
+    url: >-
+      https://raw.githubusercontent.com/api-evangelist/giantbomb/refs/heads/main/rate-limits/giantbomb-rate-limits.yml
+  - type: Plans
+    url: >-
+      https://raw.githubusercontent.com/api-evangelist/giantbomb/refs/heads/main/plans/giantbomb-plans-pricing.yml
+  - type: FinOps
+    url: >-
+      https://raw.githubusercontent.com/api-evangelist/giantbomb/refs/heads/main/finops/giantbomb-finops.yml
+- aid: giantbomb:giantbomb-search-api
+  name: Giant Bomb Search API
+  description: Search across all resources
+  humanURL: https://www.giantbomb.com/api/
+  baseURL: https://www.giantbomb.com/api
+  tags:
+  - Search
+  properties:
+  - type: OpenAPI
+    url: openapi/giantbomb-search-api-openapi.yml
+  - type: Documentation
+    url: https://www.giantbomb.com/api/documentation/
+  - type: GettingStarted
+    url: https://www.giantbomb.com/api/
+  - type: Authentication
+    url: https://www.giantbomb.com/api/
+  - type: RateLimits
+    url: >-
+      https://raw.githubusercontent.com/api-evangelist/giantbomb/refs/heads/main/rate-limits/giantbomb-rate-limits.yml
+  - type: Plans
+    url: >-
+      https://raw.githubusercontent.com/api-evangelist/giantbomb/refs/heads/main/plans/giantbomb-plans-pricing.yml
+  - type: FinOps
+    url: >-
+      https://raw.githubusercontent.com/api-evangelist/giantbomb/refs/heads/main/finops/giantbomb-finops.yml
+- aid: giantbomb:giantbomb-videos-api
+  name: Giant Bomb Videos API
+  description: Access to videos
+  humanURL: https://www.giantbomb.com/api/
+  baseURL: https://www.giantbomb.com/api
+  tags:
+  - Videos
+  properties:
+  - type: OpenAPI
+    url: openapi/giantbomb-videos-api-openapi.yml
+  - type: Documentation
+    url: https://www.giantbomb.com/api/documentation/
+  - type: GettingStarted
+    url: https://www.giantbomb.com/api/
+  - type: Authentication
+    url: https://www.giantbomb.com/api/
+  - type: RateLimits
+    url: >-
+      https://raw.githubusercontent.com/api-evangelist/giantbomb/refs/heads/main/rate-limits/giantbomb-rate-limits.yml
+  - type: Plans
+    url: >-
+      https://raw.githubusercontent.com/api-evangelist/giantbomb/refs/heads/main/plans/giantbomb-plans-pricing.yml
+  - type: FinOps
+    url: >-
+      https://raw.githubusercontent.com/api-evangelist/giantbomb/refs/heads/main/finops/giantbomb-finops.yml
 common:
   - type: AgenticAccess
     url: agentic-access/giantbomb-agentic-access.yml
