@@ -1,0 +1,30 @@
+{
+  "provider": "giantbomb",
+  "sources": [
+    "giantbomb-characters-api-openapi.yml",
+    "giantbomb-companies-api-openapi.yml",
+    "giantbomb-franchises-api-openapi.yml",
+    "giantbomb-games-api-openapi.yml",
+    "giantbomb-platforms-api-openapi.yml",
+    "giantbomb-releases-api-openapi.yml",
+    "giantbomb-reviews-api-openapi.yml",
+    "giantbomb-search-api-openapi.yml",
+    "giantbomb-videos-api-openapi.yml"
+  ],
+  "outputs": [
+    "giantbomb-characters-api-openapi.yml",
+    "giantbomb-companies-api-openapi.yml",
+    "giantbomb-franchises-api-openapi.yml",
+    "giantbomb-games-api-openapi.yml",
+    "giantbomb-platforms-api-openapi.yml",
+    "giantbomb-releases-api-openapi.yml",
+    "giantbomb-reviews-api-openapi.yml",
+    "giantbomb-search-api-openapi.yml",
+    "giantbomb-videos-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}
