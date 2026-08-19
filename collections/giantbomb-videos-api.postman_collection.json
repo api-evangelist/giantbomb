@@ -1,0 +1,303 @@
+{
+  "item": [
+    {
+      "id": "d335866c-322a-4278-8979-66d6e76d373b",
+      "name": "Videos",
+      "description": {
+        "content": "Access to videos",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "5cc0e10d-d3ab-4228-8a07-14fac662c0c0",
+          "name": "Get videos",
+          "request": {
+            "name": "Get videos",
+            "description": {
+              "content": "Returns a list of videos",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "videos",
+                ""
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "format",
+                  "value": "json",
+                  "description": "Response format"
+                },
+                {
+                  "disabled": false,
+                  "key": "field_list",
+                  "value": "<string>",
+                  "description": "Comma-separated list of fields to include in response"
+                },
+                {
+                  "disabled": false,
+                  "key": "limit",
+                  "value": "100",
+                  "description": "Number of results to return (max 100)"
+                },
+                {
+                  "disabled": false,
+                  "key": "offset",
+                  "value": "0",
+                  "description": "Offset into result set"
+                },
+                {
+                  "disabled": false,
+                  "key": "sort",
+                  "value": "<string>",
+                  "description": "Field to sort by (prefix with - for descending)"
+                },
+                {
+                  "disabled": false,
+                  "key": "filter",
+                  "value": "<string>",
+                  "description": "Filter results (e.g., field:value)"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "5de21281-f540-42cd-ba8e-6058f49356b1",
+              "name": "Successful response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "videos",
+                    ""
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "format",
+                      "value": "json"
+                    },
+                    {
+                      "key": "field_list",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "limit",
+                      "value": "100"
+                    },
+                    {
+                      "key": "offset",
+                      "value": "0"
+                    },
+                    {
+                      "key": "sort",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "filter",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "api_key",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": \"string\",\n  \"limit\": 3638,\n  \"offset\": 5257,\n  \"number_of_page_results\": 4728,\n  \"number_of_total_results\": 6450,\n  \"status_code\": 4619\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "1a97a781-50a4-4e41-9642-55585f312ffe",
+          "name": "Get single video",
+          "request": {
+            "name": "Get single video",
+            "description": {
+              "content": "Returns a single video",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "video",
+                ":guid",
+                ""
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "format",
+                  "value": "json",
+                  "description": "Response format"
+                },
+                {
+                  "disabled": false,
+                  "key": "field_list",
+                  "value": "<string>",
+                  "description": "Comma-separated list of fields to include in response"
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "guid",
+                  "description": "(Required) Video GUID"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "06dcba9a-bc1f-4bf3-8987-66a153e2049b",
+              "name": "Successful response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "video",
+                    ":guid",
+                    ""
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "format",
+                      "value": "json"
+                    },
+                    {
+                      "key": "field_list",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "api_key",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "guid",
+                      "description": "(Required) Video GUID"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": \"string\",\n  \"limit\": 3638,\n  \"offset\": 5257,\n  \"number_of_page_results\": 4728,\n  \"number_of_total_results\": 6450,\n  \"status_code\": 4619\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://www.giantbomb.com/api",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "api_key"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}"
+      },
+      {
+        "key": "in",
+        "value": "query"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "a79f30c6-cc72-4225-9561-a5cb35a4263a",
+    "name": "Giant Bomb Characters Videos API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "The Giant Bomb API provides access to video game data including games, platforms, characters, companies, franchises, reviews, and videos. Giant Bomb is a video game website and wiki that covers video game news, reviews, and features.\n\nContact Support:\n Name: Giant Bomb API Support",
+      "type": "text/plain"
+    }
+  }
+}

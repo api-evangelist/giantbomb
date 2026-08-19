@@ -1,0 +1,187 @@
+{
+  "item": [
+    {
+      "id": "8dc5160b-9b50-4283-a771-5dc01ba1ef34",
+      "name": "Search",
+      "description": {
+        "content": "Search across all resources",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "8b6a8439-b731-4b35-ac37-6447a99a7334",
+          "name": "Search across all resources",
+          "request": {
+            "name": "Search across all resources",
+            "description": {
+              "content": "Search for games, characters, companies, platforms, and other resources",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "search",
+                ""
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "query",
+                  "value": "<string>",
+                  "description": "(Required) Search query string"
+                },
+                {
+                  "disabled": false,
+                  "key": "resources",
+                  "value": "<string>",
+                  "description": "Comma-separated list of resource types to search (game,franchise,character,platform,company,etc.)"
+                },
+                {
+                  "disabled": false,
+                  "key": "format",
+                  "value": "json",
+                  "description": "Response format"
+                },
+                {
+                  "disabled": false,
+                  "key": "field_list",
+                  "value": "<string>",
+                  "description": "Comma-separated list of fields to include in response"
+                },
+                {
+                  "disabled": false,
+                  "key": "limit",
+                  "value": "100",
+                  "description": "Number of results to return (max 100)"
+                },
+                {
+                  "disabled": false,
+                  "key": "offset",
+                  "value": "0",
+                  "description": "Offset into result set"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "05bdf86b-824f-46f7-9fc7-35bf2a9b1a6e",
+              "name": "Successful response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "search",
+                    ""
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "query",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "resources",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "format",
+                      "value": "json"
+                    },
+                    {
+                      "key": "field_list",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "limit",
+                      "value": "100"
+                    },
+                    {
+                      "key": "offset",
+                      "value": "0"
+                    },
+                    {
+                      "key": "api_key",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": \"string\",\n  \"limit\": 4103,\n  \"offset\": 1928,\n  \"number_of_page_results\": 2742,\n  \"number_of_total_results\": 2363,\n  \"status_code\": 5808\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://www.giantbomb.com/api",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "api_key"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}"
+      },
+      {
+        "key": "in",
+        "value": "query"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "408501ed-bdfd-480f-bae2-701d320db46d",
+    "name": "Giant Bomb Characters Search API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "The Giant Bomb API provides access to video game data including games, platforms, characters, companies, franchises, reviews, and videos. Giant Bomb is a video game website and wiki that covers video game news, reviews, and features.\n\nContact Support:\n Name: Giant Bomb API Support",
+      "type": "text/plain"
+    }
+  }
+}

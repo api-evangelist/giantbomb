@@ -1,0 +1,75 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Giant Bomb Characters Search API",
+    "version": "1.0.0"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "api_key",
+      "value": "{{api_key}}",
+      "placement": "query"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Search",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Search across all resources",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://www.giantbomb.com/api/search/",
+            "params": [
+              {
+                "name": "query",
+                "value": "",
+                "type": "query",
+                "description": "Search query string"
+              },
+              {
+                "name": "resources",
+                "value": "",
+                "type": "query",
+                "description": "Comma-separated list of resource types to search (game,franchise,character,platform,company,etc.)"
+              },
+              {
+                "name": "format",
+                "value": "",
+                "type": "query",
+                "description": "Response format"
+              },
+              {
+                "name": "field_list",
+                "value": "",
+                "type": "query",
+                "description": "Comma-separated list of fields to include in response"
+              },
+              {
+                "name": "limit",
+                "value": "",
+                "type": "query",
+                "description": "Number of results to return (max 100)"
+              },
+              {
+                "name": "offset",
+                "value": "",
+                "type": "query",
+                "description": "Offset into result set"
+              }
+            ]
+          },
+          "docs": "Search for games, characters, companies, platforms, and other resources"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

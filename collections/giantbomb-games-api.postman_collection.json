@@ -1,0 +1,303 @@
+{
+  "item": [
+    {
+      "id": "1dd5eba2-0f22-4cb6-b4de-f6f8a24e6453",
+      "name": "Games",
+      "description": {
+        "content": "Access to video game data",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "7d7e8756-4609-43bf-a86b-03ed43923b27",
+          "name": "Get games",
+          "request": {
+            "name": "Get games",
+            "description": {
+              "content": "Returns a list of games",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "games",
+                ""
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "format",
+                  "value": "json",
+                  "description": "Response format"
+                },
+                {
+                  "disabled": false,
+                  "key": "field_list",
+                  "value": "<string>",
+                  "description": "Comma-separated list of fields to include in response"
+                },
+                {
+                  "disabled": false,
+                  "key": "limit",
+                  "value": "100",
+                  "description": "Number of results to return (max 100)"
+                },
+                {
+                  "disabled": false,
+                  "key": "offset",
+                  "value": "0",
+                  "description": "Offset into result set"
+                },
+                {
+                  "disabled": false,
+                  "key": "sort",
+                  "value": "<string>",
+                  "description": "Field to sort by (prefix with - for descending)"
+                },
+                {
+                  "disabled": false,
+                  "key": "filter",
+                  "value": "<string>",
+                  "description": "Filter results (e.g., field:value)"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "4c48ddef-3051-4226-a242-4231d892e80e",
+              "name": "Successful response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "games",
+                    ""
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "format",
+                      "value": "json"
+                    },
+                    {
+                      "key": "field_list",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "limit",
+                      "value": "100"
+                    },
+                    {
+                      "key": "offset",
+                      "value": "0"
+                    },
+                    {
+                      "key": "sort",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "filter",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "api_key",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": \"string\",\n  \"limit\": 4894,\n  \"offset\": 7665,\n  \"number_of_page_results\": 6947,\n  \"number_of_total_results\": 7891,\n  \"status_code\": 4853\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "0c4b91bb-261d-4816-92ba-1dc0638df43b",
+          "name": "Get single game",
+          "request": {
+            "name": "Get single game",
+            "description": {
+              "content": "Returns a single game",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "game",
+                ":guid",
+                ""
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "format",
+                  "value": "json",
+                  "description": "Response format"
+                },
+                {
+                  "disabled": false,
+                  "key": "field_list",
+                  "value": "<string>",
+                  "description": "Comma-separated list of fields to include in response"
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "guid",
+                  "description": "(Required) Game GUID"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "8c9709d2-ef66-481a-b132-9a301ef48f0c",
+              "name": "Successful response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "game",
+                    ":guid",
+                    ""
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "format",
+                      "value": "json"
+                    },
+                    {
+                      "key": "field_list",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "api_key",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "guid",
+                      "description": "(Required) Game GUID"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": \"string\",\n  \"limit\": 4894,\n  \"offset\": 7665,\n  \"number_of_page_results\": 6947,\n  \"number_of_total_results\": 7891,\n  \"status_code\": 4853\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://www.giantbomb.com/api",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "api_key"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}"
+      },
+      {
+        "key": "in",
+        "value": "query"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "19b98c64-fbdd-4f60-baad-ed951c06a06d",
+    "name": "Giant Bomb Characters Games API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "The Giant Bomb API provides access to video game data including games, platforms, characters, companies, franchises, reviews, and videos. Giant Bomb is a video game website and wiki that covers video game news, reviews, and features.\n\nContact Support:\n Name: Giant Bomb API Support",
+      "type": "text/plain"
+    }
+  }
+}

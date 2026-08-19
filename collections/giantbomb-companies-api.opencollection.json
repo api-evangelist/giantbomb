@@ -1,0 +1,106 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Giant Bomb Characters Companies API",
+    "version": "1.0.0"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "api_key",
+      "value": "{{api_key}}",
+      "placement": "query"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Companies",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get companies",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://www.giantbomb.com/api/companies/",
+            "params": [
+              {
+                "name": "format",
+                "value": "",
+                "type": "query",
+                "description": "Response format"
+              },
+              {
+                "name": "field_list",
+                "value": "",
+                "type": "query",
+                "description": "Comma-separated list of fields to include in response"
+              },
+              {
+                "name": "limit",
+                "value": "",
+                "type": "query",
+                "description": "Number of results to return (max 100)"
+              },
+              {
+                "name": "offset",
+                "value": "",
+                "type": "query",
+                "description": "Offset into result set"
+              },
+              {
+                "name": "sort",
+                "value": "",
+                "type": "query",
+                "description": "Field to sort by (prefix with - for descending)"
+              },
+              {
+                "name": "filter",
+                "value": "",
+                "type": "query",
+                "description": "Filter results (e.g., field:value)"
+              }
+            ]
+          },
+          "docs": "Returns a list of companies"
+        },
+        {
+          "info": {
+            "name": "Get single company",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://www.giantbomb.com/api/company/:guid/",
+            "params": [
+              {
+                "name": "guid",
+                "value": "",
+                "type": "path",
+                "description": "Company GUID"
+              },
+              {
+                "name": "format",
+                "value": "",
+                "type": "query",
+                "description": "Response format"
+              },
+              {
+                "name": "field_list",
+                "value": "",
+                "type": "query",
+                "description": "Comma-separated list of fields to include in response"
+              }
+            ]
+          },
+          "docs": "Returns a single company"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
