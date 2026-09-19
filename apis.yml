@@ -151,6 +151,8 @@ apis:
   humanURL: https://www.giantbomb.com/api/
   baseURL: https://www.giantbomb.com/api
   tags:
+  - Platform
+  tags_raw:
   - Platforms
   properties:
   - type: OpenAPI
@@ -251,6 +253,8 @@ apis:
   humanURL: https://www.giantbomb.com/api/
   baseURL: https://www.giantbomb.com/api
   tags:
+  - Video
+  tags_raw:
   - Videos
   properties:
   - type: OpenAPI
