@@ -1,15 +1,7 @@
 {
   "provider": "giantbomb",
   "sources": [
-    "giantbomb-characters-api-openapi.yml",
-    "giantbomb-companies-api-openapi.yml",
-    "giantbomb-franchises-api-openapi.yml",
-    "giantbomb-games-api-openapi.yml",
-    "giantbomb-platforms-api-openapi.yml",
-    "giantbomb-releases-api-openapi.yml",
-    "giantbomb-reviews-api-openapi.yml",
-    "giantbomb-search-api-openapi.yml",
-    "giantbomb-videos-api-openapi.yml"
+    "_original/openapi.json"
   ],
   "outputs": [
     "giantbomb-characters-api-openapi.yml",
@@ -25,6 +17,20 @@
   "archived": [],
   "errors": [],
   "warnings": [],
-  "notes": [],
-  "skipped": []
+  "notes": [
+    "sourced from openapi/_original/ (1 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "openapi.json: upgraded openapi 3.0.0 -> OpenAPI 3.2.0",
+    "apis.yml register: already-registered"
+  ],
+  "skipped": [
+    "giantbomb-characters-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "giantbomb-companies-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "giantbomb-franchises-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "giantbomb-games-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "giantbomb-platforms-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "giantbomb-releases-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "giantbomb-reviews-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "giantbomb-search-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "giantbomb-videos-api-openapi.yml: previously refined output, superseded by openapi/_original/"
+  ]
 }

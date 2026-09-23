@@ -1,6 +1,6 @@
-openapi: 3.0.0
+openapi: 3.2.0
 info:
-  title: Giant Bomb Characters Search API
+  title: Giant Bomb Search API
   description: The Giant Bomb API provides access to video game data including games, platforms, characters, companies, franchises, reviews, and videos. Giant Bomb is a video game website and wiki that covers video game news, reviews, and features.
   version: 1.0.0
   contact:
@@ -47,6 +47,12 @@ paths:
                 $ref: '#/components/schemas/ApiResponse'
 components:
   parameters:
+    field_list:
+      name: field_list
+      in: query
+      description: Comma-separated list of fields to include in response
+      schema:
+        type: string
     format:
       name: format
       in: query
@@ -66,12 +72,6 @@ components:
         minimum: 1
         maximum: 100
         default: 100
-    field_list:
-      name: field_list
-      in: query
-      description: Comma-separated list of fields to include in response
-      schema:
-        type: string
     offset:
       name: offset
       in: query
