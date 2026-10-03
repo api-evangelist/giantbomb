@@ -61,14 +61,16 @@ paths:
                 $ref: '#/components/schemas/ApiResponse'
 components:
   parameters:
-    offset:
-      name: offset
+    format:
+      name: format
       in: query
-      description: Offset into result set
+      description: Response format
       schema:
-        type: integer
-        minimum: 0
-        default: 0
+        type: string
+        enum:
+        - json
+        - xml
+        default: json
     sort:
       name: sort
       in: query
@@ -81,6 +83,14 @@ components:
       description: Comma-separated list of fields to include in response
       schema:
         type: string
+    offset:
+      name: offset
+      in: query
+      description: Offset into result set
+      schema:
+        type: integer
+        minimum: 0
+        default: 0
     limit:
       name: limit
       in: query
@@ -96,16 +106,6 @@ components:
       description: Filter results (e.g., field:value)
       schema:
         type: string
-    format:
-      name: format
-      in: query
-      description: Response format
-      schema:
-        type: string
-        enum:
-        - json
-        - xml
-        default: json
   schemas:
     ApiResponse:
       type: object
