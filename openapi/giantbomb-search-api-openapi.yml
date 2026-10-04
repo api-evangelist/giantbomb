@@ -47,6 +47,14 @@ paths:
                 $ref: '#/components/schemas/ApiResponse'
 components:
   parameters:
+    offset:
+      name: offset
+      in: query
+      description: Offset into result set
+      schema:
+        type: integer
+        minimum: 0
+        default: 0
     format:
       name: format
       in: query
@@ -63,14 +71,6 @@ components:
       description: Comma-separated list of fields to include in response
       schema:
         type: string
-    offset:
-      name: offset
-      in: query
-      description: Offset into result set
-      schema:
-        type: integer
-        minimum: 0
-        default: 0
     limit:
       name: limit
       in: query
