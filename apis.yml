@@ -42,7 +42,7 @@ tags:
   - Media
 url: https://raw.githubusercontent.com/api-evangelist/giantbomb/refs/heads/main/apis.yml
 created: '2026-06-13'
-modified: '2026-06-13'
+modified: '2026-10-06'
 specificationVersion: '0.23'
 apis:
 - aid: giantbomb:giantbomb-characters-api
@@ -275,6 +275,8 @@ apis:
     url: >-
       https://raw.githubusercontent.com/api-evangelist/giantbomb/refs/heads/main/finops/giantbomb-finops.yml
 common:
+  - url: https://giantbomb.com/feeds/articles
+    type: BlogRSS
   - type: AgenticAccess
     url: agentic-access/giantbomb-agentic-access.yml
   - type: DomainSecurity
