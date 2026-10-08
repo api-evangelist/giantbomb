@@ -60,3 +60,19 @@ plans:
       - name: Reviews Resource
       - name: Videos Resource
       - name: Search Resource
+x-canonical:
+  generated: '2026-10-08'
+  vocabulary: all/0-working/economics/plans-canonical.yml
+  models:
+  - free
+  units:
+  - rate
+  plans:
+  - name: Free
+    access: free
+    model: free
+    model_how: derived
+    units:
+    - rate
+    periods:
+    - hour
