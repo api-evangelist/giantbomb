@@ -2,6 +2,20 @@
   "repo": "giantbomb",
   "feeds": [
     {
+      "source": "https://giantbomb.com/feeds/articles",
+      "feed_url": "https://giantbomb.com/feeds/articles",
+      "title": "",
+      "saved": 1,
+      "method": "feed"
+    },
+    {
+      "source": "https://www.giantbomb.com/articles/",
+      "feed_url": "https://www.giantbomb.com/articles/",
+      "title": "",
+      "saved": 0,
+      "method": "none"
+    },
+    {
       "source": "https://www.linkedin.com/company/giant-bomb/",
       "feed_url": "https://www.linkedin.com/company/giant-bomb/",
       "title": "",
@@ -9,6 +23,6 @@
       "method": "none"
     }
   ],
-  "post_count": 0,
-  "fetched": "2026-10-03T12:30:02Z"
+  "post_count": 1,
+  "fetched": "2026-10-10T13:15:00Z"
 }
