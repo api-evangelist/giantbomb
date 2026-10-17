@@ -47,6 +47,12 @@ paths:
                 $ref: '#/components/schemas/ApiResponse'
 components:
   parameters:
+    field_list:
+      name: field_list
+      in: query
+      description: Comma-separated list of fields to include in response
+      schema:
+        type: string
     offset:
       name: offset
       in: query
@@ -65,12 +71,6 @@ components:
         - json
         - xml
         default: json
-    field_list:
-      name: field_list
-      in: query
-      description: Comma-separated list of fields to include in response
-      schema:
-        type: string
     limit:
       name: limit
       in: query

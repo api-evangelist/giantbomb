@@ -61,6 +61,12 @@ paths:
                 $ref: '#/components/schemas/ApiResponse'
 components:
   parameters:
+    field_list:
+      name: field_list
+      in: query
+      description: Comma-separated list of fields to include in response
+      schema:
+        type: string
     offset:
       name: offset
       in: query
@@ -69,12 +75,6 @@ components:
         type: integer
         minimum: 0
         default: 0
-    field_list:
-      name: field_list
-      in: query
-      description: Comma-separated list of fields to include in response
-      schema:
-        type: string
     format:
       name: format
       in: query
@@ -85,6 +85,12 @@ components:
         - json
         - xml
         default: json
+    filter:
+      name: filter
+      in: query
+      description: Filter results (e.g., field:value)
+      schema:
+        type: string
     limit:
       name: limit
       in: query
@@ -98,12 +104,6 @@ components:
       name: sort
       in: query
       description: Field to sort by (prefix with - for descending)
-      schema:
-        type: string
-    filter:
-      name: filter
-      in: query
-      description: Filter results (e.g., field:value)
       schema:
         type: string
   schemas:
