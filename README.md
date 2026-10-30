@@ -64,35 +64,159 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Giant Bomb is a video game database and media platform providing comprehensive data on over
-100,000 games, characters, companies, concepts, franchises, locations, objects, and other
-game-related entities. The Giant Bomb API offers RESTful access to this rich dataset, enabling
-developers to query and integrate video game information into their applications.
+Giant Bomb is a video game database and media platform providing comprehensive data on over 100,000 games, characters, companies, concepts, franchises, locations, objects, and other game-related entities. The Giant Bomb API offers RESTful access to this rich dataset, enabling developers to query and integrate video game information into their applications using simple GET requests authenticated with a personal API key.
 
-## API
+**Areas:** Entertainment · Video Games · Game Database · Gaming · Media
 
-- **Base URL:** `https://www.giantbomb.com/api`
-- **Authentication:** API key passed as `api_key` query parameter
-- **Formats:** JSON and XML
-- **Rate Limit:** 200 requests per resource per hour
+## Giant Bomb on APIs.io
 
-## Resources
+Everything profiled for Giant Bomb is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/giantbomb/](https://apis.io/providers/giantbomb/)** — or go straight to one of the APIs or properties below.
 
-The API covers the following resource types:
+### APIs (9)
 
-- Games, Releases, Platforms
-- Characters, Persons
-- Companies
-- Concepts, Franchises, Genres, Themes
-- Locations, Objects
-- Reviews, User Reviews
-- Videos, Video Types
-- Search
+- [Giant Bomb Characters API](https://apis.io/apis/giantbomb/giantbomb-characters-api/) — Access to character data
+- [Giant Bomb Companies API](https://apis.io/apis/giantbomb/giantbomb-companies-api/) — Access to company data
+- [Giant Bomb Franchises API](https://apis.io/apis/giantbomb/giantbomb-franchises-api/) — Access to franchise data
+- [Giant Bomb Games API](https://apis.io/apis/giantbomb/giantbomb-games-api/) — Access to video game data
+- [Giant Bomb Platforms API](https://apis.io/apis/giantbomb/giantbomb-platforms-api/) — Access to platform data
+- [Giant Bomb Releases API](https://apis.io/apis/giantbomb/giantbomb-releases-api/) — Access to game release data
+- [Giant Bomb Reviews API](https://apis.io/apis/giantbomb/giantbomb-reviews-api/) — Access to game reviews
+- [Giant Bomb Search API](https://apis.io/apis/giantbomb/giantbomb-search-api/) — Search across all resources
+- [Giant Bomb Videos API](https://apis.io/apis/giantbomb/giantbomb-videos-api/) — Access to videos
 
-## Links
+### Published properties
 
-- Website: https://www.giantbomb.com/
-- API Documentation: https://www.giantbomb.com/api/documentation/
-- Developer Forum: https://www.giantbomb.com/forums/api-developers-3017/
-- Blog: https://www.giantbomb.com/articles/
-- X / Twitter: https://x.com/giantbomb
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### Agentic access (1)
+
+Which operations an agent can call, which act, and which need a human in the loop.
+
+- [Giantbomb Agentic Access](https://apis.io/agentic-access/giantbomb/giantbomb-agentic-access/)
+
+#### JSON Schema (2)
+
+The data models the API reads and writes.
+
+- [ApiResponse](https://apis.io/schemas/giantbomb/api-response/)
+- [Game](https://apis.io/schemas/giantbomb/game/)
+
+#### JSON-LD (1)
+
+Linked-data contexts for the provider's vocabulary.
+
+- [Giantbomb Context](https://apis.io/jsonld/giantbomb/giantbomb-context/)
+
+#### Examples (2)
+
+Example requests and responses.
+
+- [Get Games](https://apis.io/examples/giantbomb/get-games/)
+- [Search](https://apis.io/examples/giantbomb/search/)
+
+#### Collections (8)
+
+Postman and Open Collection request collections.
+
+- [Giant Bomb Characters API](https://apis.io/collections/giantbomb/open-giantbomb-characters-api/)
+- [Giant Bomb Characters Companies API](https://apis.io/collections/giantbomb/open-giantbomb-companies-api/)
+- [Giant Bomb Characters Franchises API](https://apis.io/collections/giantbomb/open-giantbomb-franchises-api/)
+- [Giant Bomb Characters Games API](https://apis.io/collections/giantbomb/open-giantbomb-games-api/)
+- [Giant Bomb Characters Platforms API](https://apis.io/collections/giantbomb/open-giantbomb-platforms-api/)
+- [Giant Bomb Characters Releases API](https://apis.io/collections/giantbomb/open-giantbomb-releases-api/)
+- [Giant Bomb Characters Search API](https://apis.io/collections/giantbomb/open-giantbomb-search-api/)
+- [Giant Bomb Characters Videos API](https://apis.io/collections/giantbomb/open-giantbomb-videos-api/)
+
+#### Governance rules (1)
+
+Spectral rulesets for the provider's contracts.
+
+- [Giant Bomb — jsonschema rules](https://apis.io/rules/giantbomb/giantbomb-jsonschema-spectral-rules/)
+
+#### Security (2)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Giantbomb Authentication](https://apis.io/security/giantbomb/giantbomb-authentication/)
+- [Giantbomb Domain Security](https://apis.io/security/giantbomb/giantbomb-domain-security/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Giantbomb Plans Pricing](https://apis.io/plans/giantbomb/giantbomb-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Giantbomb Rate Limits](https://apis.io/rate-limits/giantbomb/giantbomb-rate-limits/)
+
+#### FinOps (1)
+
+What the API costs to run, by operation.
+
+- [Giantbomb Finops](https://apis.io/finops/giantbomb/giantbomb-finops/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://www.giantbomb.com/)
+- [Documentation](https://www.giantbomb.com/api/documentation/)
+- [Pricing](https://www.giantbomb.com/api/)
+- [Blog](https://www.giantbomb.com/articles/)
+- [Status](https://www.giantbomb.com/)
+
+## API Evangelist rating
+
+**Kin Score 35.1** — thin · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 66.1 |
+| Contract quality | 53.4 |
+| Contract governance | 9.8 |
+| Operational transparency | 26.3 |
+| Developer ergonomics | 35.7 |
+| Access clarity | 15.8 |
+
+**Agent readiness 22.9** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | derived (partial credit) |
+| Reversibility Documented | na |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | na |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | documented (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | na |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 16.7** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/giantbomb/](https://apis.io/providers/giantbomb/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Giant Bomb: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/giantbomb/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
